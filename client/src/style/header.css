@@ -1,0 +1,146 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgb(57, 164, 57);
+
+  /* background-color: lightgreen; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* margin-top: 10px; */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  color: white;
+  /* color: #333; */
+}
+
+.logo p {
+  margin-left: 10px;
+  color: #777;
+}
+
+.logo img {
+  background: white;
+  width: 100px;
+  height: 90px;
+  font-size: 40px;
+  border-radius: 50%;
+  padding: 10px;
+
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #68c043;
+}
+
+.search-donate {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.donate-button {
+  padding: 0.7rem 1.5rem;
+  background-color:  rgb(6, 46, 6);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+  background-color: #56a435;
+}
+.navbar-break{
+  display: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+/* Add this to sidebar.css */
+@media (max-width: 1200px) {
+  .nav {
+    display: none; 
+    flex-direction: column; 
+    position: fixed; 
+    right: 0; 
+    top: 0; 
+    width: 250px; 
+    height: 100%; 
+    background-color: white; 
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.10s ease-in; 
+    transform: translateX(100%); 
+    z-index: 1000; 
+    padding: 10px 10px;
+ 
+  }
+  .nav a {
+    padding: 15px;
+    border-bottom: 2px ridge black;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s, color 0.3s;
+    
+}
+
+  .nav a:hover {
+    background: black;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+
+  .nav.show {
+    display: flex;
+    transform: translateX(0);
+  }
+  .navbar-break{
+    display: flex;
+  }
+  .navbar-break .close{
+      font-size: 40px;
+      padding: auto;
+  }
+  .donate-button{
+      margin-left: 50px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .nav {
+    display: flex; 
+  }
+
+}

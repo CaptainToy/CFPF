@@ -1,0 +1,141 @@
+.container{
+    width: 100%;
+    max-width: 100%;
+
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9; 
+    padding: 20px;
+    border-radius: 15px;
+    /* margin-top: 20px; */
+    width: 100%;
+}
+
+.image {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Text section */
+.text-section {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.text-section h1 {
+    font-size: 2.5em;
+    color: #252F40;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.text-section a:hover {
+    text-decoration: underline;
+}
+
+/* Custom icon */
+.icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon-image {
+    width: 40px; /* Adjust size of icon */
+    margin-right: 10px;
+}
+.container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the text horizontally */
+    margin-top: 20px;
+}
+
+.container-text h1 {
+    text-align: center; 
+    text-transform: uppercase;
+}
+.container-text h1 span{
+    color: red;
+}
+.container-text p{
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.event-card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -30px;
+  }
+  
+  .event-card {
+    margin-top: 40px;
+    padding-right: 30px;
+  }
+  
+  .event-date {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .event-date span {
+    font-size: 15px;
+    font-weight: normal;
+    color: #808080;
+  }
+  
+  .event-organizer {
+    font-size: 20px;
+    color: #808080;
+    margin-bottom: 5px;
+  }
+  
+  .organizer-name {
+    color: #5fa10f;
+    font-weight: bold;
+  }
+  
+  .event-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  .event-time {
+    font-size: 15px;
+    color: #808080;
+  }
+  .event-location{
+    color: #808080;
+    font-size: 15px;
+    margin-top: -15px;
+  }
+  
+  .event-time i, .event-location i {
+    font-weight: 1000;
+    margin-right: 3px;
+    font-size: 20px;
+  }
+  
+  .event-calendar-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .event-calendar-btn:hover {
+    background-color: #f0f0f0;
+  }
+  

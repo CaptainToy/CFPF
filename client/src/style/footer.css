@@ -1,0 +1,132 @@
+.footer {
+  background-color: rgb(6, 46, 6);
+
+    /* background-color: green; */
+    color: #fff;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .footer-text-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .charity-logo {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .charity-text {
+    line-height: 1.6;
+  }
+  .charity-text strong{
+    font-style: 20px;
+  }
+  .charity-text p{
+    font-size: 14px;
+  }
+  
+  .contact-info h3,
+  .services h3,
+  .submit-form h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .contact-info p,
+  .services ul,
+  .submit-form form {
+    font-size: 14px;
+    color: white;
+  }
+  
+  .services ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .services ul li {
+    margin-bottom: 8px;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 20px; 
+    color: #fff;
+    font-size: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.facebook:hover {
+    color: #1877F2;
+    transform: translateY(7px, -2px);
+}
+
+.instagram:hover {
+    color: #C13584;
+    transform: translateY(7px, -2px);
+}
+
+.youtube:hover {
+    color: #FF0000;
+    transform: translateY(7px, -2px);
+}
+
+.twitter:hover {
+    color: #1DA1F2;
+    transform: translateY(7px,-2px);
+}
+
+  .submit-form input,
+  .submit-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(191, 222, 191);
+    outline: none;
+    resize: none;
+  }
+  .submit-form textarea{
+    max-height: 20%;
+  }
+  
+  .submit-form button {
+    background-color: rgb(2, 74, 2);
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .submit-form button:hover {
+    background-color: darkgreen;
+  }
+
+  .logo-cele{
+    font-size: 50px;
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  
+    .footer-section {
+      margin-right: 0;
+    }
+  }
+  
