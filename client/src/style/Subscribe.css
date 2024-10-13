@@ -71,3 +71,65 @@
     background-color: rgb(40, 194, 40);
     transform: translateY(-2px);
 }
+
+
+/* Media Query for max-width 1200px */
+@media (max-width: 1200px) {
+    .subscribe-container {
+        padding: 50px;
+    }
+    .subscribe-header {
+        font-size: 35px;
+    }
+    .subscribe-description {
+        font-size: 18px;
+    }
+    .subscribe-input, .subscribe-button {
+        width: 450px;
+    }
+    .parent-container {
+        margin-left: 10rem;
+    }
+}
+
+/* Media Query for max-width 768px */
+@media (max-width: 768px) {
+    .subscribe-container {
+        flex-direction: column;
+        padding: 40px;
+    }
+    .subscribe-header {
+        font-size: 30px;
+    }
+    .subscribe-description {
+        font-size: 16px;
+    }
+    .subscribe-input, .subscribe-button {
+        width: 100%;
+    }
+    .parent-container {
+        margin-left: 5rem;
+        padding: 15px;
+    }
+}
+
+/* Media Query for max-width 600px */
+@media (max-width: 600px) {
+    .subscribe-container {
+        padding: 20px;
+    }
+    .subscribe-header {
+        font-size: 25px;
+    }
+    .subscribe-description {
+        font-size: 14px;
+    }
+    .subscribe-input, .subscribe-button {
+        width: 100%;
+        font-size: 14px;
+    }
+    .parent-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+}

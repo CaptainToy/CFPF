@@ -12,15 +12,17 @@ function UpperNav() {
           </div>
           <div className="contact-item">
           <span class="material-symbols-outlined span">mail</span>
-            <a href="mailto:donation@cfphfoundation.org">donation@cfphfoundation.org</a>
+            <a href="mailto:celebrityfoodpantry@gmail.com">donation@cfphfoundation.org</a>
           </div>
         </div>
-  
         <div className="login-icons">
           <a href="#"><i class="bi bi-instagram instagram"></i></a>
           <a href="#"><i class="bi bi-facebook facebook"></i></a>
-          <a href="#"><i className="bi bi-youtube youtube" /></a>
+          <a href="https://www.youtube.com/@cfphfoundation/videos"><i className="bi bi-youtube youtube" /></a>
         </div>
+        <div className="search-donate">
+        <button className="donate-button">Donate Now</button>
+      </div>
       </div>
     )
 }

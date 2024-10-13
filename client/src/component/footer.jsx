@@ -24,8 +24,8 @@ const Footer = () => {
         <div className="footer-section contact-info footer-text-container">
           <h3>Contact Info</h3>
           <p><strong>Address</strong>:No 20 Olusanya Street, Jesugbami, Aboru, Lagos, Nigeria</p>
-          <p><strong>Phone</strong>: 08084009711</p>
-          <p><strong>E-mail</strong>: celebrityfoodpantry@gmail.com</p>
+          <p><strong>Phone</strong>:  <a href="tel:+2348084009711">+234 808 400 9711</a></p>
+          <p><strong>E-mail</strong>: <a href="mailto:donation@cfphfoundation.org">donation@cfphfoundation.org</a></p>
 
 
           

@@ -19,25 +19,49 @@ const SupportSection = () => {
   };
 
   return (
+    
     <div className='container-text'>
+      
       <h2 className="title">GET <span></span> <span className="highlight">INVOLVED</span></h2>
-      <p className="description">
+      {/* <p className="description">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since.
-      </p>
+      </p> */}
       <div className="support-section">
         <div className="left-section">
-          <h3>We believe what we achieve</h3>
-          <h1>Warmth & True Support For Needed People</h1>
+          {/* <h3>How You Can Make a Difference:</h3> */}
+          {/* <h1>How You Can Make a Difference</h1> */}
           <div className="video-section">
+
             <ul>
-              <li><strong>Volunteer:</strong>
-              Get involved by offering your time and skills to make a meaningful impact in the community. Join us in various volunteer opportunities that align with your interests and expertise.</li>
-              <li><strong>Donate:</strong>
-              Make a difference by contributing financially to support our initiatives. Every donation, no matter the size, helps us provide essential resources and services to those in need.</li>
-              <li><strong>Fundraise:</strong>
-              Explore creative ideas and tools to organize successful fundraising events. From online campaigns to community gatherings, we provide the resources and support you need to engage your network and raise vital funds for our cause.</li>
-              <li><strong>Sponsorship:</strong>
-              Discover exciting opportunities for corporate sponsorships. Partner with us to enhance your brand visibility while making a significant contribution to meaningful projects. Together, we can create lasting change in the community</li>
+              <li><strong className='Volunteer'>Become a Volunteer:</strong>
+              Offer your time, skills, and passion to uplift communities.</li>
+              <ul className='hide'>
+                <li><strong>What you can do:</strong>Get involved by offering your expertise in a variety of roles, from community outreach to skill-building programs.</li>
+                <li><strong>Impact:</strong>Volunteers are the heartbeat of our mission, directly supporting the people who need it the most.</li>
+              </ul>
+
+
+              <li><strong className='Donate' >Make a Donation:</strong>
+              Every contribution helps to create a lasting impact.</li>
+              <ul className='hide'>
+                <li><strong>Why donate?</strong>Your financial support empowers us to deliver essential resources like food, healthcare, education, and shelter.</li>
+                <li><strong>Impact:</strong>No matter the size, your donation creates immediate relief and helps sustain long-term improvement.</li>
+              </ul>
+
+
+              <li><strong className='Fundraise'>Support Fundraising Initiatives:</strong>
+              Raise funds to support the causes close to your heart.</li>
+              <ul className='hide'>
+                <li><strong>How it works:</strong>Collaborate with us to create meaningful fundraising campaigns, whether online or through events. We provide the tools, guidance, and resources to succeed.</li>
+                <li><strong>Impact:</strong>Engage your network, raise awareness, and contribute to a future of sustainable change.</li>
+              </ul>
+
+              <li><strong className='Sponsorship'>Corporate Sponsorship:</strong>
+              Empower communities while enhancing your brand visibility.</li>
+              <ul className='hide'>
+                <li><strong>Why partner with us?</strong>Sponsoring our initiatives provides corporate organizations the opportunity to make a meaningful impact on society while gaining brand visibility.</li>
+                <li><strong>Impact:</strong>Together, we can drive significant, lasting improvements that benefit both the community and your organization.</li>
+              </ul>
             </ul>
           </div>
         </div>
@@ -52,18 +76,19 @@ const SupportSection = () => {
                 onMouseLeave={handleMouseLeave}
                 style={{
                   transform: hoverIndex === idx ? `translate(${hoverPosition.x / 10}px, ${hoverPosition.y / 10}px)` : 'translate(0, 0)',
-                  transition: 'transform 0.3s ease',
+                  transition: 'transform 0.5s ease',
                 }}
               >
-                {color === 'orange' && 'Become A Genuine Volunteer'}
-                {color === 'blue' && 'Make A Donation To Achieve'}
-                {color === 'dark-blue' && 'Sponsorship for Improvement'}
-                {color === 'red' && 'Fundraise for Social Improvement.'}
+                {color === 'orange' && 'Join as a Volunteer'}
+                {color === 'blue' && 'Donate Now'}
+                {color === 'dark-blue' && 'Start a Fundraiser'}
+                {color === 'red' && 'Become a Sponsor'}
               </div>
             ))}
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

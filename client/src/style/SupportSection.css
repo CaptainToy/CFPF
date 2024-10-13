@@ -22,7 +22,10 @@
     color: #2e2e2e;
   }
   
+.container-text .title{
+  font-size: 50px;
 
+}
 
   .video-section ul li{
     margin-bottom: 15px;
@@ -32,6 +35,23 @@
     margin-right: 10px;
     text-transform: uppercase;
     font-weight: 1000;
+  }
+  .hide{
+    line-height: 20px;
+  }
+  .video-section ul li .Volunteer{
+    color: orange;
+  }
+  .video-section ul li .Donate{
+    color: blue;
+  }
+  
+  .video-section ul li .Fundraise{
+    color: darkblue;
+  }
+  
+  .video-section ul li .Sponsorship{
+    color: red;
   }
   
   .left-section p {
@@ -115,7 +135,7 @@
     display: flex;
     justify-content: space-between;
     padding: 40px;
-    background-color: #f0f8ff;
+    /* background-color: #f0f8ff; */
   }
   
   .grid-box {
@@ -157,22 +177,73 @@
   .box:hover {
     transition: transform 0.1s ease-in-out;
   }
-  
-  @media (max-width: 600px) {
-    .support-section{
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    .left-section h3{
-      text-wrap: nowrap;
-      font-size: 15px;
-    }
-    .left-section h1{
-      font-size: 20px;
-      /* text-wrap: nowrap; */
-    }
+  /* Styles for screens with a max width of 1200px */
+@media (max-width: 1200px) {
+  .support-section {
+    padding: 30px;
+    flex-direction: column;
   }
-  @media (max-width: 1200px) {}
-  @media (max-width: 768px){}
+
+  .left-section {
+    padding-right: 20px;
+  }
+
+  .right-section {
+    margin-top: 20px;
+  }
+
+  .box {
+    padding: 50px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Styles for screens with a max width of 768px */
+@media (max-width: 768px) {
+  .support-section {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .left-section h1 {
+    font-size: 2rem;
+  }
+
+  .left-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .grid-box {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    padding: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Styles for screens with a max width of 600px */
+@media (max-width: 600px) {
+  .support-section {
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .left-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .left-section h3 {
+    font-size: 1rem;
+  }
+
+  .box {
+    padding: 30px;
+    font-size: 0.9rem;
+  }
+
+  .grid-box {
+    grid-template-columns: 1fr;
+  }
+}

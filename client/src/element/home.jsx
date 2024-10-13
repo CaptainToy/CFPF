@@ -8,11 +8,24 @@ import Footer from "../component/footer"
 import Mission from "../component/Mission"
 import Testimonials from '../component/Testimonials'
 import Subscribe from "../component/Subscribe "
+import Footerstyle from "../component/copyright"
 // img
 import AuntyTayo from '../assets/AuntyTayo.jpg'
 import Bandy from '../assets/bandy.jpg'
+import Tayo from '../assets/tayp.jpg'
+import Pesinpapa from "../assets/IMG_0282.jpg"
+
+// nav
+
 
 const sampleTestimonials = [
+  {
+    name: 'Dele Oduyemi',
+    role: 'Executive Director',
+    imageUrl: Bandy,
+    instagram:"",
+    facebook:"",
+  },
     {
       name: 'Omotayo Oduyemi',
       role: 'Chief Executive Officer',
@@ -21,25 +34,27 @@ const sampleTestimonials = [
       facebook:"", 
     },
     {
-      name: 'Dele Oduyemi',
-      role: 'Executive Director',
-      imageUrl: Bandy,
+      name: 'Tayo Adesanya',
+      role: 'General Secretary',
+      imageUrl: Tayo,
       instagram:"",
       facebook:"",
     },
+    
     {
       name: 'Shadrack Akinola',
       role: 'Project/PR Manager',
-      imageUrl: Bandy,
+      imageUrl: Pesinpapa,
       instagram:"",
       facebook:"",
     },
+    
   ];
   
 function home (){
     return(
         <>
-        <UpperNav />
+        <UpperNav /> 
         <Sidebar/>
         <LandingPage/>
         <Mission/>
@@ -49,6 +64,8 @@ function home (){
         <Testimonials/>
         <Subscribe/>
         <Footer/>
+        <Footerstyle/>
+        
         </>
        
     )

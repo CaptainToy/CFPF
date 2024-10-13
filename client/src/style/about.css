@@ -6,13 +6,13 @@
 .content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #f9f9f9; 
-    padding: 20px;
+    align-items: center;    padding: 20px;
     border-radius: 15px;
-    /* margin-top: 20px; */
-    width: 100%;
+    position: relative;
+    margin: auto;
 }
+
+
 
 .image {
     width: 45%;
@@ -139,3 +139,60 @@
     background-color: #f0f0f0;
   }
   
+
+  /* For screens with max-width of 1200px */
+@media only screen and (max-width: 1200px) {
+  .content {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .image {
+      width: 100%; 
+  }
+  .text-section {
+    margin-top: 10px;
+      width: 100%; 
+      padding-left: 0;
+  }
+  .event-card-container {
+      flex-direction: column;
+      margin-left: 0;
+  }
+}
+
+/* For screens with max-width of 768px */
+@media only screen and (max-width: 768px) {
+  .text-section h1 {
+      font-size: 2em; 
+  }
+  .event-date {
+      font-size: 30px; 
+  }
+  .event-date span {
+      font-size: 12px;
+  }
+  .event-organizer {
+      font-size: 18px;
+  }
+  .event-footer {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+}
+
+/* For screens with max-width of 600px */
+@media only screen and (max-width: 600px) {
+  .container {
+      padding: 10px; 
+  }
+  .text-section h1 {
+      font-size: 1.8em; 
+  }
+  .event-card {
+      padding-right: 0;
+  }
+  .event-calendar-btn {
+      padding: 8px 16px; 
+  }
+}
