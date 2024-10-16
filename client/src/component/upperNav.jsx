@@ -1,8 +1,20 @@
 import React from "react";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 
 
 function UpperNav() {
+  const MySwal = withReactContent(Swal);
+
+  const handleCausesClick = () => {
+    MySwal.fire({
+      title: "Oops...",
+      text: "Something went wrong!",
+      icon: "error"
+    });
+  };
+
     return(
         <div className="headerNav">
         <div className="contact-info">
@@ -16,12 +28,12 @@ function UpperNav() {
           </div>
         </div>
         <div className="login-icons">
-          <a href="#"><i class="bi bi-instagram instagram"></i></a>
+          <a href="https://www.instagram.com/cfphfoundation?igsh=MTB0NmF6YjZtNXZ2Nw=="><i class="bi bi-instagram instagram"></i></a>
           <a href="#"><i class="bi bi-facebook facebook"></i></a>
           <a href="https://www.youtube.com/@cfphfoundation/videos"><i className="bi bi-youtube youtube" /></a>
         </div>
         <div className="search-donate">
-        <button className="donate-button">Donate Now</button>
+        <button className="donate-button" onClick={handleCausesClick}>Donate Now</button>
       </div>
       </div>
     )

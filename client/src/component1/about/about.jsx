@@ -7,12 +7,8 @@ const AboutSection = () => {
       <div className="overlay">
         <div className="content-overlay">
           <h1>About</h1>
-          <p>
-            Esse dolorum voluptatum ullam est sint nemo et est ipsa porro
-            placeat quibusdam quia assumenda numquam molestias.
-          </p>
           <nav>
-            <a href="/">Home</a>/<span>About</span>
+            <a href="/">Home / About</a>
           </nav>
         </div>
       </div>

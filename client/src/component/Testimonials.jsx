@@ -33,7 +33,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="testimonialsSection">
+    <div className="testimonialsSection" id='Testimonials'>
          <h2 className="title">Clients <span className="highlight">Testimonials</span></h2>
       <p className="description">
       Discover why clients love Celebrity Food Pantry Home Foundation! Read testimonials about their experiences and how our services have made a positive impact on their lives.</p>

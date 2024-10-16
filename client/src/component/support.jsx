@@ -20,7 +20,7 @@ const SupportSection = () => {
 
   return (
     
-    <div className='container-text'>
+    <div className='container-text' id='SupportSection'>
       
       <h2 className="title">GET <span></span> <span className="highlight">INVOLVED</span></h2>
       {/* <p className="description">

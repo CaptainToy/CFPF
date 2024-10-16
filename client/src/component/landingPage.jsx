@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from "react";
-import img1 from '../assets/home.jpeg'; 
 import img2 from '../assets/hero.jpg';
 import img3 from '../assets/hero2.jpg';
+import img4 from '../assets/img1/9.jpg'
+// import
 
 
 const data = [
   {
-    img: img2,
+    img: img4,
     heading: "Celebrity Food Pantry Home Foundation",
     subText: "Food | Life | Hope",
     AboutUs: "About Us"
   },
-  // {
-  //   img: img2,
-  //   heading: "Nourishing the Community",
-  //   subText: "hello i am a good boy ",
-  //   AboutUs: ""
-  // },
   {
-    img: img3,
+    img: img2,
     heading: "Empowering Families",
     subText: "We have empowered over 5,000 households by providing food and clothing to the needy, special individuals, elderly and widows",
     AboutUs: "Donate Now"
+  },
+  {
+    img: img3,
+    heading: "Food Distribution",
+    subText: "We presently distribute food items to needy households including: the elderly, widows, special people, nursing mothers, and vulnerable individuals every two weeks on Thursdays at our office",
+    AboutUs: ""
   },
   
 ];
@@ -33,7 +34,7 @@ const LandingPage = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 7000); // Change every 5 seconds
+    }, 10000); // Change every 5 seconds
 
     return () => clearInterval(intervalId); // Cleanup interval on unmount
   }, []);
@@ -70,9 +71,7 @@ const LandingPage = () => {
        <div className="container-space">
           <p>{subText}</p>
           {AboutUs !== "" ? (
-            <button className="about-btn" onClick={handleAboutUsClick}>
-              {AboutUs}
-            </button>
+            <a href="#" className="about-btn" onClick={handleAboutUsClick}>{AboutUs}</a>
           ) : null} 
        </div>
        

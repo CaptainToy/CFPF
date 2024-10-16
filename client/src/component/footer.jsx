@@ -5,7 +5,7 @@ import Logo from '../assets/logo-removebg-preview (1).png';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id='Footer'> 
       <div className="footer-container">
         <div className="footer-section charity-info">
           <div className="icon">
@@ -30,9 +30,9 @@ const Footer = () => {
 
           
           <div className="social-links">
-          <a href="#"><i class="bi bi-instagram instagram"></i></a>
+          <a href="https://www.instagram.com/cfphfoundation?igsh=MTB0NmF6YjZtNXZ2Nw=="><i class="bi bi-instagram instagram"></i></a>
           <a href="#"><i class="bi bi-facebook facebook"></i></a>
-          <a href="#"><i className="bi bi-youtube youtube" /></a>
+          <a href="https://www.youtube.com/@cfphfoundation/videos"><i className="bi bi-youtube youtube" /></a>
           <a href="#"><i class="bi bi-twitter twitter"></i></a>
           </div>
         </div>
@@ -45,6 +45,7 @@ const Footer = () => {
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <textarea placeholder="Message"></textarea>
+            
             <button type="submit">Submit</button>
           </form>
         </div>

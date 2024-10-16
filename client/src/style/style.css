@@ -7,6 +7,16 @@
   bottom: 0;
   width: 100%;
 }
+.celebrity-footer,
+.headerNav,
+.contact-info,
+.contact-item,
+.search-donate,
+.donate-button,
+.login-icons,
+.donor-login {
+  overflow: hidden; /* Hide overflow */
+}
 
 .headerNav {
     display: flex;
@@ -93,6 +103,138 @@
 
 
 
+/* Media query for max-width: 1200px */
+@media (max-width: 1200px) {
+  .celebrity-footer {
+    padding: 3px 5px;
+    font-size: 14px;
+  }
+
+  .headerNav {
+    padding: 8px 10px;
+    max-width: 100%;
+  }
+
+  .contact-info {
+    gap: 15px;
+  }
+
+  .contact-item {
+    font-size: 12px;
+  }
+
+  .donate-button {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .login-icons {
+    flex-direction: column;
+    gap: 5px;
+    margin-right:-20rem;
+  }
+
+  .login-icons a {
+    font-size: 12px;
+  }
+
+  .login-icons i {
+    font-size: 14px;
+  }
+}
+
+/* Media query for max-width: 768px */
+@media (max-width: 768px) {
+  .celebrity-footer {
+    padding: 3px 0;
+    font-size: 12px;
+  }
+
+  .headerNav {
+    padding: 8px 10px;
+  }
+
+  .contact-info {
+    gap: 10px;
+    
+
+  }
+
+  .contact-item {
+    font-size: 11px;
+  }
+
+  .donate-button {
+    /* padding: 0.3rem 1rem; */
+    font-size: 0.7rem;
+  }
+
+  .login-icons {
+    gap: 5px;
+    margin-right: -20rem;
+    flex-direction: column;
+  }
+
+  .login-icons a {
+    font-size: 12px;
+  }
+
+  .login-icons i {
+    font-size: 12px;
+  }
+}
+
+/* Media query for max-width: 600px */
+@media (max-width: 600px) {
+  .celebrity-footer {
+    padding: 2px 0;
+    font-size: 10px;
+  }
+
+  .headerNav {
+    padding: 5px 8px;
+  }
+
+  .contact-info {
+    gap: 5px;
+  }
+
+  .contact-item {
+    font-size: 10px;
+  }
+
+  .donate-button {
+    font-size: 5px;
+    padding: 3px 5px;
+  }
+
+  .login-icons {
+    margin-right: -5rem;
+    flex-direction: column; 
+    gap: 5px;
+  }
+
+  .login-icons a {
+    font-size: 10px;
+  }
+
+  .login-icons i {
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -166,7 +308,6 @@
   margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
-  /* text-align: center; */
 }
 .container-space{
   display: flex;
@@ -187,6 +328,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+text-decoration: none;
 }
 
 .about-btn:hover {
@@ -223,23 +365,23 @@
 .custom-shape-divider-bottom-1728769860 .shape-fill {
   fill: #FFFFFF;
 }
-/* For screens with a max width of 1200px */
 @media (max-width: 1200px) {
   .header__container {
     flex-direction: column;
     height: auto;
     margin-left: 0;
     padding: 1.5rem;
+    overflow: hidden; /* Ensure overflow is hidden */
   }
 
   .header__content {
-    max-width: 70%; 
+    max-width: 100%; /* Changed from 70% to 100% */
     width: 100%;
     font-size: 1rem;
   }
 
   .header__image__container {
-    width: 80%; 
+    width: 100%; /* Changed from 80% to 100% */
     height: 400px;
   }
 
@@ -249,21 +391,21 @@
   }
 }
 
-/* For screens with a max width of 768px */
 @media (max-width: 768px) {
   .header__container {
     padding: 1rem;
     height: auto;
     margin-left: 0;
+    overflow: hidden; /* Ensure overflow is hidden */
   }
 
   .header__content {
-    max-width: 100%; 
+    max-width: 100%;
     width: 100%;
   }
 
   .header__image__container {
-    width: 100%;
+    width: 100%; /* Changed to 100% */
     height: 350px;
   }
 
@@ -278,11 +420,11 @@
   }
 }
 
-/* For screens with a max width of 600px */
 @media (max-width: 600px) {
   .header__container {
     padding: 0.5rem;
     margin-left: 0;
+    overflow: hidden; /* Ensure overflow is hidden */
   }
 
   .header__content h1 {
@@ -304,60 +446,10 @@
   }
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .header__container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .header__content, .header__image__container {
-    width: 100%;
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .header__image__container {
-    min-height: 300px;
-    background-position: center;
-  }
-
-  .header__content h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
-
-  .header__content p {
-    font-size: 1rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Small phones (max-width: 480px) */
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .header__container {
     padding: 1rem 0.5rem 3rem 0.5rem;
+    overflow: hidden; /* Ensure overflow is hidden */
   }
 
   .header__image__container {
@@ -365,6 +457,7 @@
     background-position: center;
     background-size: cover; 
     padding: 10px;
+    width: 100%; /* Ensure it takes full width */
   }
 
   .header__content h1 {
@@ -383,46 +476,18 @@
   }
 }
 
-/* Normal phones (max-width: 768px) */
-@media only screen and (max-width: 768px) {
-  .header__container {
-    padding: 1rem 1rem 4rem 1rem;
-  }
-
-  .header__image__container {
-    min-height: 400px;
-    background-position: center;
-    background-size: cover; 
-    padding: 15px;
-  }
-
-  .header__content h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
-
-  .booking__container {
-    bottom: -4rem;
-    padding: 2.5rem 1.5rem;
-    width: calc(100% - 5rem);
-  }
-
-  .booking__container form {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Tablets (max-width: 1024px) */
 @media only screen and (max-width: 1024px) {
   .header__container {
     padding: 1rem 1.5rem 4rem 1.5rem;
+    overflow: hidden; /* Ensure overflow is hidden */
   }
 
   .header__image__container {
     min-height: 450px;
     background-position: center;
-    background-size: cover; /* Image fills the container */
+    background-size: cover; 
     padding: 20px;
+    width: 100%; /* Ensure it takes full width */
   }
 
   .header__content h1 {
@@ -441,17 +506,18 @@
   }
 }
 
-/* Large screens (min-width: 2560px) */
 @media only screen and (min-width: 2560px) {
   .header__container {
     padding: 2rem 3rem 6rem 3rem;
+    overflow: hidden; /* Ensure overflow is hidden */
   }
 
   .header__image__container {
     min-height: 700px;
-    background-position: center; /* Adjust image to center on large screens */
-    background-size: cover; /* Image fills the container */
+    background-position: center; 
+    background-size: cover; 
     padding: 40px;
+    width: 100%; /* Ensure it takes full width */
   }
 
   .header__content h1 {
@@ -469,101 +535,3 @@
     grid-template-columns: repeat(5, 1fr);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 480px) {
-  .header{
-    display: flex;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  .contact-info{
-    display: flex;
-  }
-  .material-symbols-outlined{
-    font-size: 20px;
-  }
- .contact-item{
-  margin-top: -10px;
- }
-  .contact-item span{
-    display: flex;
-    font-size: 20px;
-    text-wrap: nowrap;
-  }
-  .contact-item a{
-    text-wrap: nowrap;
-    font-size: 10px;
-  }
-  .login-icons .donor-login{
-    display: none;
-  }
-  .login-icons{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    gap: 1px;
-    font-size: 5px;
-    margin-top: -10px;
-  }
-}
-
-/* Medium phones (max-width: 768px) */
-@media only screen and (max-width: 768px) {
-  .contact-info{
-    margin-left: -10px;
-  }
-.contact-item{
-  gap: 5px;
- }
-.login-icons .donor-login{
-    display: none;
-  }
-.login-icons{
-    margin-left: 15px;
-  }
-}
-
-/* Tablets (max-width: 1024px) */
-@media only screen and (max-width: 1024px) {
-  
-}
-
-/* Extra big screens (min-width: 2560px) */
-@media only screen and (min-width: 2560px) {
-  }

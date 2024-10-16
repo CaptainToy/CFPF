@@ -1,0 +1,155 @@
+.section-about-us {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  
+  .content-about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .info-about-us {
+    width: 50%;
+  }
+  
+  .info-about-us h1 {
+    color: #1d2c4d;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .description-about-us {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .features-about-us {
+    margin-top: 20px;
+  }
+  .single-feature-about-us {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px;
+  }
+  
+  .icon-feature-about-us {
+    font-size: 2em;
+    color: #0066ff;
+    margin-right: 15px;
+  }
+  
+  .icon-feature-about-us span {
+    font-size: 50px;
+    display: inline-block; 
+    vertical-align: middle; 
+    color: black;
+  }
+  
+  .text-feature-about-us h4 {
+    font-size: 1.2em;
+    color: #1d2c4d;
+    margin: 0;
+  }
+  
+  .media-about-us {
+    position: relative;
+    width: 40%;
+  }
+  
+  .image-about-us {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .play-button-about-us {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: #0066ff;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+
+
+  /* Media query for max-width 1200px */
+@media only screen and (max-width: 1200px) {
+  .content-about-us {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .info-about-us, .media-about-us {
+    width: 100%;
+  }
+}
+
+/* Media query for max-width 768px */
+@media only screen and (max-width: 768px) {
+  .section-about-us {
+    padding: 40px;
+  }
+
+  .info-about-us h1 {
+    font-size: 2em;
+  }
+
+  .description-about-us {
+    font-size: 1em;
+  }
+
+  .icon-feature-about-us {
+    font-size: 1.8em;
+  }
+
+  .text-feature-about-us h4 {
+    font-size: 1.1em;
+  }
+
+  .text-feature-about-us p {
+    font-size: 0.95em;
+  }
+}
+
+/* Media query for max-width 600px */
+@media only screen and (max-width: 600px) {
+  .section-about-us {
+    padding: 30px;
+  }
+
+  .info-about-us h1 {
+    font-size: 1.8em;
+  }
+
+  .description-about-us {
+    font-size: 0.9em;
+  }
+
+  .icon-feature-about-us {
+    font-size: 1.6em;
+  }
+
+  .text-feature-about-us h4 {
+    font-size: 1em;
+  }
+
+  .text-feature-about-us p {
+    font-size: 0.9em;
+  }
+
+  .play-button-about-us {
+    font-size: 2.5em;
+  }
+}

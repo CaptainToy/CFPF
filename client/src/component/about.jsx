@@ -2,21 +2,21 @@ import React, { useState, useEffect } from 'react';
 import '../style/about.css';
 import erro2 from '../assets/hero2.jpg'; // Ensure to have different images for variety
 import Logo from '../assets/logo-removebg-preview (1).png';
-import img1 from '../assets/home.jpeg'; 
-import img2 from '../assets/hero.jpg';
-import img3 from '../assets/hero2.jpg';
+import img8 from '../assets/img1/8.jpg'; 
+import img22 from '../assets/img1/22.jpg';
+import img21 from '../assets/img1/21.jpg';
 
 const eventData = [
   {
-    date: "25",
-    month: "July",
+    date: "31th",
+    month: "OCT",
     organizer: "CFHPFoundation",
     time: "Starts 10AM",
     location: "No 20 Olusanya Street, Jesugbami, Aboru, Lagos, Nigeria"
   },
   {
-    date: "31",
-    month: "August",
+    date: "7th",
+    month: "NOV",
     organizer: "CFHPFoundation",
     time: "Starts 10AM",
     location: "No 20 Olusanya Street, Jesugbami, Aboru, Lagos, Nigeria"
@@ -27,10 +27,10 @@ const About = () => {
   const [slideIndex, setSlideIndex] = useState(0); 
   // Array of images
   const images = [
-    { src: img1, alt: 'Event Image 1' }, // Replace with actual paths
+    { src: img8, alt: 'Event Image 1' }, // Replace with actual paths
     { src: erro2, alt: 'Event Image 2' },
-    { src: img3, alt: 'Event Image 3' },
-    { src: img2, alt: 'Event Image 4' },
+    { src: img22, alt: 'Event Image 3' },
+    { src: img21, alt: 'Event Image 4' },
   ];
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const About = () => {
   }, [images.length]);
 
   return (
-    <div className="container">
+    <div className="container" id='OurPrograms'>
       <div className='container-text'>
         <h2 className="title">NEWS <span>&</span> <span className="highlight">EVENTS</span></h2>
       </div>
