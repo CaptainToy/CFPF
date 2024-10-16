@@ -1,5 +1,6 @@
 import Navbar from '../component/navbar';
-import AboutSection from '../event/about/about';
+// import AboutSection from '../event/about/about';
+import AboutSection from '../Blog/about/about';
 import Blog from '../Blog/blog'
 import Footer from '../component/footer';
 import UpperNav from "../component/upperNav"

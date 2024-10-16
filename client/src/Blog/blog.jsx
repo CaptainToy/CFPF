@@ -3,7 +3,6 @@ import "./blog.css";
 import img1 from '../assets/img1/2.jpg';
 import img2 from '../assets/img1/7.jpg';
 import img3 from '../assets/img1/9.jpg'
-import gg from '../assets/img1/gg.png'
 import korede from '../assets/img1/korede.jpeg';
 import pesinpapa from '../assets/IMG_0282.jpg';
 
@@ -31,9 +30,9 @@ const brandingData = [
   },
   {
     id: 3,
-    title: "One of the childern grtting a back to school resumption gift from one of our sponsors",
-    description: "Lorem ipsum, dolor sit amet consectetur adipiscing elit...",
-    fullDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue et velit molestie posuere. Curabitur convallis, sapien eget eleifend scelerisque, ipsum libero tempor nunc, non dapibus orci ligula non sapien.",
+    title: "One of the children getting a back to school resumption gift from one of our sponsors",
+    description: "Mr. Otunba Akindeji, a kind sponsor of the Celebrity Food Pantry Home Foundation, gave a special back-to-school gift . . . .",
+    fullDescription: "The beginning of a new school year is always filled with excitement, nervousness, and anticipation for children everywhere. For one child at the Celebrity Food Pantry Home Foundation, this year's school resumption was made even more special thanks to the generosity of one of our dedicated sponsors, Mr. Otunba Akindeji.At the Celebrity Food Pantry Home Foundation, we strive to provide not only food security but also opportunities for personal growth and educational support for the children we serve. This mission was beautifully echoed in Mr. Akindeji's thoughtful gesture, as he decided to give a back-to-school resumption gift to one of our bright young students.",
     imageUrl: img3,
     authorImage: korede,
     author: "Abdulsalam korede",
@@ -71,10 +70,8 @@ const Blog = () => {
             <div className="branding-content">
               <span className="branding-type">{brand.type}</span>
               <h3>{brand.title}</h3>
-              <p>
-                {brand.description}{" "}
-                <button onClick={() => handleMoreClick(brand)} className="btn-more">more</button>
-              </p>
+              <p>{brand.description}{" "}</p>
+              <div className="btn-container-content"><button onClick={() => handleMoreClick(brand)} className="btn-more">more</button></div>
               <div className="img-container-author">
                 <img src={brand.authorImage} alt="author details" />
                 <div className="author-details">

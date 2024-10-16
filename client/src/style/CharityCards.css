@@ -5,6 +5,9 @@
   margin: 0 auto;
   padding: 20px;
 }
+.testimonial-container h2{
+  margin-bottom: 25px;
+}
 
 .title {
   font-size: 2rem;

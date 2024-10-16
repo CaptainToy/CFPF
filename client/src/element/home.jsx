@@ -13,7 +13,7 @@ import Footerstyle from "../component/copyright"
 import AuntyTayo from '../assets/AuntyTayo.jpg'
 import Bandy from '../assets/bandy.jpg'
 import Tayo from '../assets/tayp.jpg'
-import Pesinpapa from "../assets/IMG_0282.jpg"
+import Pesinpapa from "../assets/IMG_0282 (1).png"
 
 // nav
 

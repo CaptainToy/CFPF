@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import'../style/second.css'
 import img2 from '../assets/hero.jpg';
 import img3 from '../assets/hero2.jpg';
 import img4 from '../assets/img1/9.jpg'
@@ -56,6 +57,7 @@ const LandingPage = () => {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           version="1.1"
           preserveAspectRatio="xMidYMid meet"
+          className="svg-content-container"
         >
           <g fill="#43a623">
             <circle r="156" cx="281" cy="106"></circle>

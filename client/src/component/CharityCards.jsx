@@ -6,9 +6,6 @@ const Testimonials = ({ testimonials }) => {
   return (
     <div className="testimonial-container">
       <h2 className="title">Team<span className="highlight">.</span></h2>
-      <p className="description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since.
-      </p>
       <div className="home-container">
         {testimonials.map((testimonial, index) => (
           <div className="profile-card" key={index}>

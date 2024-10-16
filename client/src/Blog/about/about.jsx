@@ -6,9 +6,9 @@ const AboutSection = () => {
     <section className="about-section">
       <div className="overlay">
         <div className="content-overlay">
-          <h1>Events</h1>
+          <h1>Blog</h1>
           <nav>
-            <a href="/">Home / Events</a>
+            <a href="/">Home / Blog</a>
           </nav>
         </div>
       </div>
