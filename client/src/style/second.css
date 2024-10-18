@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500&display=swap');
-
-
-
-
 :root {
     --primary-color: #4caf50; /* Custom green color */
     --primary-color-dark: #388e3c;
@@ -104,7 +100,7 @@
     width: 60%; 
     height: 600px;
     max-height: 100%;
-    background-size: cover;
+    background-size: contain;
     background-position: center right;
     background-repeat: no-repeat;
   }
@@ -250,7 +246,7 @@
     .header__image__container {
       min-height: auto;
       background-position: center;
-      background-size: cover; 
+      background-size: contain; 
       padding: 10px;
       width: 100%; /* Ensure it takes full width */
     }
@@ -280,7 +276,7 @@
     .header__image__container {
       min-height: 450px;
       background-position: center;
-      background-size: cover; 
+      background-size: contain; 
       padding: 20px;
       width: 100%; /* Ensure it takes full width */
     }
@@ -310,7 +306,7 @@
     .header__image__container {
       min-height: 700px;
       background-position: center; 
-      background-size: cover; 
+      background-size: contain; 
       padding: 40px;
       width: 100%; /* Ensure it takes full width */
     }

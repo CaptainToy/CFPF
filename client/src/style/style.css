@@ -16,6 +16,7 @@ body {
   bottom: 0;
   width: 100%;
 }
+
 .celebrity-footer,
 .headerNav,
 .contact-info,
@@ -62,7 +63,11 @@ body {
    
   }
   .contact-item i, .contact-item .span {
-    color: green; /* Icon color (green) */
+    color: green; 
+  }
+  .span{
+    display: block;
+    color: green;
   }
   
   .contact-item a {
@@ -108,6 +113,28 @@ body {
 
 .login-icons .youtube{
     color: #FF0000;
+}
+#copy-button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+#copy-button:hover {
+  background-color: rgb(50, 129, 50);
+  transform: translateY(-2px);
+}
+
+#copy-button:active {
+  background-color: #004085;
+  transform: translateY(0);
 }
 
 
@@ -247,3 +274,30 @@ body {
 
 
 
+
+
+/* .animated-modal {
+  animation: fadeIn 0.5s, fadeOut 0.5s 2s forwards; /
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+} */

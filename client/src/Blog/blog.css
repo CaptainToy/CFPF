@@ -44,7 +44,7 @@
 
 .branding-item img {
   width: 100%;
-  height: auto;
+  height: 300px;
 }
 
 .branding-item img:hover{
@@ -112,9 +112,12 @@
   align-items: center;
 }
 .btn-more{
+  /* padding: 5px 10px; */
+  margin-top: 20px;
   text-transform: uppercase;
   border: 1px solid black;
   background: white;
+  border: none;
 }
 /* Modal styles */
 .modal {

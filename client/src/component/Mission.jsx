@@ -26,7 +26,7 @@ const Mission = () => {
           <div className="info-card">
             <span className="material-symbols-outlined iconpi">check</span>
             <div className="info-text">
-              <h3>VISSION</h3> 
+              <h3>VISION</h3> 
               <p>
                 A world where everyone has access to nutritious food and a chance to thrive.
               </p>

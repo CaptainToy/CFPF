@@ -8,16 +8,16 @@ import img21 from '../assets/img1/21.jpg';
 
 const eventData = [
   {
-    date: "31th",
+    date: "31st",
     month: "OCT",
-    organizer: "CFHPFoundation",
+    organizer: "CFPHFoundation",
     time: "Starts 10AM",
     location: "No 20 Olusanya Street, Jesugbami, Aboru, Lagos, Nigeria"
   },
   {
     date: "7th",
     month: "NOV",
-    organizer: "CFHPFoundation",
+    organizer: "CFPHFoundation",
     time: "Starts 10AM",
     location: "No 20 Olusanya Street, Jesugbami, Aboru, Lagos, Nigeria"
   }

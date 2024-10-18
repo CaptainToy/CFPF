@@ -1,60 +1,102 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link, useLocation } from 'react-router-dom';
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
 import '../style/header.css'; 
 import Logo from '../assets/logo-removebg-preview (1).png';
+import Footer from '../component/footer';
 
-const Sidebar = () => {
-  const [isNavVisible, setIsNavVisible] = useState(false); 
-  const location = useLocation(); // Get current location to determine active link
+function Sidebar() {
+  const [isActive, setIsActive] = useState(false);
+  const location = useLocation(); // To get the current path
+  const navigate = useNavigate();
 
-  const toggleNav = () => {
-    setIsNavVisible(prevState => !prevState); 
+  // Toggle active class for menu
+  const toggleActiveClass = () => {
+    setIsActive(!isActive);
   };
 
-  const isActive = (path) => {
-    return location.pathname === path ? 'active' : ''; // Check if the current path matches
+  // Remove active class when an item is clicked
+  const removeActive = () => {
+    setIsActive(false);
   };
 
-  const MySwal = withReactContent(Swal);
+  // Updated toggleBack function
+  const toggleBack = () => {
+    removeActive(); // Close the sidebar
+    navigate('/'); // Navigate to home
+  }
 
-  const handleCausesClick = () => {
-    MySwal.fire({
-      title: "The Internet?",
-      text: "Something went wrong!",
-      icon: "question"
-    });
+  // Function to check if a link should be active
+  const isLinkActive = (path) => location.pathname === path ? 'active' : '';
+
+  // Scroll to section
+  const scrollToSection = (id) => {
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
-  const handleLinkClick = () => {
-    if (window.innerWidth < 768) {
-      setIsNavVisible(false); // Close the menu when a link is clicked on mobile
+  // Handle navigation and scrolling
+  const handleNavigationAndScroll = (sectionId) => {
+    if (location.pathname !== '/') {
+      // If not on home, navigate to home first and then scroll
+      navigate('/');
+      setTimeout(() => scrollToSection(sectionId), 300); // Timeout to wait for the home page to load
+    } else {
+      // If already on home, just scroll
+      scrollToSection(sectionId);
     }
   };
 
   return (
-    <header className="header">
-      <div className="logo">
-        <img src={Logo} alt="logo" />
-      </div>
-      <nav className={`nav ${isNavVisible ? 'show' : ''}`}>
-        <Link to="/" className={isActive('/')} onClick={handleLinkClick}>Home</Link>
-        <a href="#OurPrograms" onClick={handleLinkClick}>Our Programs</a>
-        <Link to="/about" className={isActive('/about')} onClick={handleLinkClick}>About Us</Link>
-        <Link to="/event" className={isActive('/event')} onClick={handleLinkClick}>Events</Link>
-        <a href="#SupportSection" className={isActive('/causes')}>Get Involved</a> 
-        <Link to="/blog" className={isActive('/blog')} onClick={handleLinkClick}>Blog</Link>
-        <a href="#Testimonials" onClick={handleLinkClick}>Testimonials</a>
-        <a href="#Footer" className={isActive('/contact')} onClick={handleLinkClick}>Contact</a> 
-      </nav>
-      <div className="navbar-break" onClick={toggleNav} aria-label="Toggle navigation menu">
-        <span className="material-symbols-outlined">
-          {isNavVisible ? 'close' : 'menu'}
-        </span>
-      </div>
-    </header>
+    <div className="App">
+      <header className="App-header">
+        <nav className="navbar-container-content">
+          <Link to="/" className="logo">
+            <img src={Logo} alt="Logo" />
+          </Link>
+
+          <ul className={`navMenu ${isActive ? 'active' : ''}`}>
+            <li onClick={removeActive} className='navlink'>
+              <Link to="/" className={`navlink ${isLinkActive('/')}`}>Home</Link>
+            </li>
+            <li onClick={() => handleNavigationAndScroll('#OurPrograms')} className="navlink">
+              <a href="#OurPrograms">Our Programs</a>
+            </li>
+            <li onClick={removeActive}>
+              <Link to="/about" className={`navlink ${isLinkActive('/about')}`}>About Us</Link>
+            </li>
+            <li onClick={removeActive}>
+              <Link to="/event" className={`navlink ${isLinkActive('/event')}`}>Events</Link>
+            </li>
+            <li onClick={() => handleNavigationAndScroll('#SupportSection')} className="navlink">
+              <a href="#SupportSection">Get Involved</a>
+            </li>
+            <li onClick={removeActive}>
+              <Link to="/blog" className={`navlink ${isLinkActive('/blog')}`}>Blog</Link>
+            </li>
+            <li onClick={() => handleNavigationAndScroll('#Testimonials')} className="navlink">
+              <a href="#Testimonials">Testimonials</a>
+            </li>
+            <li onClick={() => handleNavigationAndScroll('#Footer')} className="navlink">
+              <a href="#Footer">Contact</a>
+            </li>
+            <div>
+              <span className="material-symbols-outlined hamburger101" onClick={toggleBack}>close</span>
+            </div>            
+          </ul>
+
+          <button 
+            className={`hamburger ${isActive ? 'active' : ''}`}  
+            onClick={toggleActiveClass}
+            aria-label="Toggle menu"
+          ><span class="material-symbols-outlined display-non">menu</span>
+          </button>
+        </nav>
+      </header>
+    </div>
   );
-};
+}
 
 export default Sidebar;

@@ -1,109 +1,158 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+/* default styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.logo {
+ ul {
+  list-style: none;
+  text-decoration: none;
+}
+.navbar-container-content {
+  padding: 10px 20px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 70px;
+  background-color: white; /* Set background to white */
+}
+
+.navbar-container-content ul li a{
+  color: green; 
+  gap: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* logo  */
+.logo {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo img {
-  width: 100px;
-  height: 90px;
-  border-radius: 50%;
+  width: 70px;         
+  height: 70px;        
+  object-fit: cover;   
 }
-
-.nav {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  gap: 30px;
-  transition: transform 0.3s ease; 
-}
-
-.nav a {
-  /* position: relative; */
+.navLink a{
+  color: green;
+  position: relative;
   text-decoration: none;
-  color: black;
-  font-size: 20px;
-  transition: color 0.3s;
+  
 }
 
-.nav a:hover {
-  color: green;
-}
-
-.nav a.active {
-  color: green;
-  border-bottom: 1px solid green;
-}
-
-.nav a::after {
+.navLink::after {
   content: '';
-  display: none;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
+  bottom: -3px;
+  left: 0;
   background-color: green;
-  transition: width 0.3s ease, left 0.3s ease;
+  transition: width 0.4s ease-in-out;
 }
 
-.nav a:hover::after {
-  display: none;
+.navLink:hover::after {
   width: 100%;
-  left: 10px;
 }
 
-.navbar-break {
+/* ul  */
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.hamburger101{
   display: none;
-  cursor: pointer;
-  font-size: 20px;
 }
-
-@media (max-width: 768px) {
- 
-  .nav {
-    display: none; 
-    flex-direction: column; 
-    position: fixed; 
-    right: 0; 
-    top: 0; 
-    width: 50%; 
-    max-width: 40%; 
-    height: 100%; 
-    background-color: white; 
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); 
-    transform: translateX(100%); 
-    z-index: 1000; 
-    padding: 10px;
-    overflow-y: auto; 
-    transition: transform 0.3s ease; 
-  }
-
-  .nav.show {
-    position: absolute;
-    display: flex;
-    transform: translateX(0);
-  }
-
-  .navbar-break {
-    display: flex;
-    margin-right: -20px;
-  }
-
-  .navbar-break span {
-    font-size: 30px;
+.display-non{
+  display: none;
+}
+/* media queries */
+@media screen and (max-width: 780px) {
+  /* hamburger */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    border-radius: none;
+    border: none;
+    background: white;
     color: black;
+    font-size: 30px;
   }
-}
+  .display-non{
+    display: block;
+  }
+  .hamburger101{
+    display: block;
+    color: black;
+    font-size: 40px;
+    margin-top: 20px;
+  }
 
-@media (min-width: 1201px) {
-  .nav {
-    display: flex; 
+  .bar {
+    background-color: #120f0b; 
+    width: 20px;
+    height: 3px;
+    display: block;
+    margin: 5px;
+    transition: 0.3s ease-in-out;
+    border-radius: none;
+  }
+
+  /* Adding active class to the bars */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* navMenu */
+  .navMenu {
+    position: fixed; /* Changed to fixed */
+    top: 0;
+    left: -100%;
+    height: 100%; 
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: start;
+    background-color: green;
+    padding: 10px;
+    transition: 0.7s ease-in-out;
+    z-index: 1000; 
+    gap: 10px;
+  }
+
+  .navbar-container-content ul li a {
+    color: white; 
+    gap: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    list-style: none;
+  }
+
+  .navMenu.active {
+    left: 0;
+  }
+
+  .navMenu li {
+    margin: 16px 0;
+    color: green; 
   }
 }

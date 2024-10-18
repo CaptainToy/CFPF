@@ -126,13 +126,39 @@
   .logo-cele{
     font-size: 50px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .footer-container {
       flex-direction: column;
+      align-items: center;
     }
   
     .footer-section {
       margin-right: 0;
+      width: 100%; /* Ensure it takes full width of the container */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin-right: 0;
+      width: 100%; /* Ensure it takes full width of the container */
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin-right: 0;
+      width: 100%; /* Ensure it takes full width of the container */
     }
   }
   

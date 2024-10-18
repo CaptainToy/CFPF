@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import'../style/second.css'
-import img2 from '../assets/hero.jpg';
+import img2 from '../assets/img13.jpg';
 import img3 from '../assets/hero2.jpg';
-import img4 from '../assets/img1/9.jpg'
+import img4 from '../assets/img1/9.jpg';
+import img5 from '../assets/img14.jpg';
+
 // import
 
 
 const data = [
   {
-    img: img4,
+    img: img5,
     heading: "Celebrity Food Pantry Home Foundation",
     subText: "Food | Life | Hope",
     AboutUs: "About Us"
