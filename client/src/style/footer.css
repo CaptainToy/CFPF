@@ -74,7 +74,12 @@
     list-style: none;
     text-decoration: none;
 }
-
+.charity-text strong button{
+  border: none;
+  padding: 5px 25px;
+  border-radius: 30px;
+  color: green;
+}
 
 .facebook:hover {
     color: #1877F2;

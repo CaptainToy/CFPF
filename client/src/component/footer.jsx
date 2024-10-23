@@ -19,13 +19,18 @@ const Footer = () => {
             <strong>Community Outreach</strong>
             <p>We are working on partnerships with local organizations, schools, and healthcare providers to extend our services.</p>
           </p>
+
+
+          <p className="charity-text">
+            <strong><button>Admin</button></strong>
+          </p>
         </div>
 
         <div className="footer-section contact-info footer-text-container">
           <h3>Contact Info</h3>
           <p><strong>Address</strong>:No 20 Olusanya Street, Jesugbami, Aboru</p>
           <p><strong>Phone</strong>:  <a href="tel:+2348084009711">+234 808 400 9711</a></p>
-          <p><strong>E-mail</strong>: <a href="mailto:donation@cfphfoundation.org">donation@cfphfoundation.org</a></p>
+          <p><strong>E-mail</strong>: <a href="mailto:donation@cfphfoundation.org">donations@cfphfoundation.org</a></p>
 
 
           

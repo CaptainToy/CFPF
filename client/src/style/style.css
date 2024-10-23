@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500&display=swap');
 * {
-  box-sizing: border-box; /* Includes padding and borders in width calculations */
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-x: hidden; 
 }
 .celebrity-footer {
   background-color: rgb(6, 46, 6);
@@ -15,6 +15,12 @@ body {
   padding: 5px 0;
   bottom: 0;
   width: 100%;
+  text-decoration: none;
+  list-style: none;
+}
+.celebrity-footer small a{
+  text-decoration: none;
+  list-style: none;
 }
 
 .celebrity-footer,
@@ -34,6 +40,7 @@ body {
     align-items: center;
     background-color: rgb(222, 233, 222);
     padding: 10px 20px;
+    width: 100%;
   }
   
   .contact-info {
@@ -45,7 +52,7 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: #333; /* Text color */
+    color: #333; 
     font-size: 14px;
   }
   .search-donate {
@@ -60,6 +67,7 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    border-radius: 20px;
    
   }
   .contact-item i, .contact-item .span {
@@ -68,25 +76,36 @@ body {
   .span{
     display: block;
     color: green;
+    text-wrap: nowrap;
   }
   
   .contact-item a {
     text-decoration: none;
     color: black;
     font-weight: bold;
+    text-wrap: nowrap;
+
   }
   
+  /* .login-icons {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 10px;
+    width: 100%; 
+  } */
   .login-icons {
     display: flex;
+    justify-content: flex-end; 
     align-items: center;
-    gap: 20px;
-    margin-right: -53rem;
+    gap: 10px;
+    width: 50%; 
   }
   
   .login-icons a {
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: 10px;
   }
   
   .login-icons i {
@@ -156,18 +175,11 @@ body {
   }
 
   .contact-item {
-    font-size: 12px;
-  }
-
-  .donate-button {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.8rem;
+    font-size: 10px;
   }
 
   .login-icons {
-    flex-direction: column;
-    gap: 5px;
-    margin-right:-20rem;
+    justify-content: flex-end;
   }
 
   .login-icons a {
@@ -191,26 +203,20 @@ body {
   }
 
   .contact-info {
-    /* margin-left: -20%; */
-
     gap: 8px;
-    
-
   }
 
   .contact-item {
-    font-size: 11px;
+    font-size: 10px;
   }
 
-  .donate-button {
-    /* padding: 0.3rem 1rem; */
-    font-size: 0.7rem;
-  }
 
   .login-icons {
     gap: 5px;
-    margin-right: -20rem;
-    flex-direction: column;
+    /* margin-left: 10%; */
+  }
+  .login-icons {
+    justify-content: flex-end;
   }
 
   .login-icons a {
@@ -231,6 +237,7 @@ body {
 
   .headerNav {
     padding: 5px 8px;
+    max-width: 100%;
   }
 
   .contact-info {
@@ -239,20 +246,12 @@ body {
   }
 
   .contact-item {
-    font-size: 10px;
+    font-size: 8px;
   }
-
-  .donate-button {
-    font-size: 5px;
-    padding: 3px 5px;
-  }
-
+  
   .login-icons {
-    margin-right: -5rem;
-    flex-direction: column; 
-    gap: 5px;
+    justify-content: flex-end;
   }
-
   .login-icons a {
     font-size: 10px;
   }

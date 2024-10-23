@@ -5,8 +5,19 @@
  left: 10;
  margin-bottom: 20px;
  overflow: hidden;
+ max-width: 100%;
+
  
 }
+.title-mission{
+  padding: 20px 10px;
+  margin-bottom: -10px;
+}
+/* #about{
+  box-shadow: 2px 2px 10px rgba(144, 238, 144, 0.5);
+  padding: 20px 10px;
+
+} */
 
 
 .school-container {
@@ -86,7 +97,10 @@
 .container-text .title{
   font-size: 40px;
 }
-  
+  .container-text{
+    margin-top: -20px;
+    max-width: 100%;
+  }
 /* Media query for screens with a max width of 1200px */
 @media screen and (max-width: 1200px) {
   .school-container {
@@ -104,6 +118,9 @@
 
   .container-text .title {
     font-size: 35px;
+  }
+  .title-mission{
+    margin-top: -110px;
   }
 }
 
@@ -126,6 +143,7 @@
     font-size: 45px;
     padding: 30px;
   }
+  
 
   .info-text h3 {
     font-size: 22px;

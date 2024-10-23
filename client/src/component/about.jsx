@@ -8,7 +8,7 @@ import img21 from '../assets/img1/21.jpg';
 
 const eventData = [
   {
-    date: "31st",
+    date: "14th",
     month: "OCT",
     organizer: "CFPHFoundation",
     time: "Starts 10AM",
@@ -27,7 +27,7 @@ const About = () => {
   const [slideIndex, setSlideIndex] = useState(0); 
   // Array of images
   const images = [
-    { src: img8, alt: 'Event Image 1' }, // Replace with actual paths
+    { src: img8, alt: 'Event Image 1' }, 
     { src: erro2, alt: 'Event Image 2' },
     { src: img22, alt: 'Event Image 3' },
     { src: img21, alt: 'Event Image 4' },

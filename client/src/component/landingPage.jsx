@@ -1,50 +1,97 @@
 import React, { useState, useEffect } from "react";
-import'../style/second.css'
+import { Link } from "react-router-dom";
+import '../style/second.css';
 import img2 from '../assets/img13.jpg';
 import img3 from '../assets/hero2.jpg';
-import img4 from '../assets/img1/9.jpg';
 import img5 from '../assets/img14.jpg';
+import withReactContent from 'sweetalert2-react-content';
+import Swal from 'sweetalert2';
 
-// import
+// Initialize MySwal
+const MySwal = withReactContent(Swal);
 
-
+// Sample data
 const data = [
   {
     img: img5,
     heading: "Celebrity Food Pantry Home Foundation",
     subText: "Food | Life | Hope",
-    AboutUs: "About Us"
+    buttonLabel: "About Us",
   },
   {
     img: img2,
     heading: "Empowering Families",
-    subText: "We have empowered over 5,000 households by providing food and clothing to the needy, special individuals, elderly and widows",
-    AboutUs: "Donate Now"
+    subText: "We have empowered over 5,000 households by providing food and clothing to the needy, special individuals, elderly, and widows",
+    buttonLabel: "Donate Now",
   },
   {
     img: img3,
     heading: "Food Distribution",
     subText: "We presently distribute food items to needy households including: the elderly, widows, special people, nursing mothers, and vulnerable individuals every two weeks on Thursdays at our office",
-    AboutUs: ""
+    buttonLabel: "",
   },
-  
 ];
 
 const LandingPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { img, heading, subText, AboutUs } = data[currentIndex];
+  const [isButtonActive, setIsButtonActive] = useState(true);
+  const { img, heading, subText, buttonLabel } = data[currentIndex];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 10000); // Change every 5 seconds
+    }, 5000);
 
-    return () => clearInterval(intervalId); // Cleanup interval on unmount
+    return () => clearInterval(intervalId);
   }, []);
 
-  const handleAboutUsClick = () => {
-    // Add your navigation logic here
-    console.log("About Us Clicked");
+  const handleDonateClick = () => {
+    MySwal.fire({
+      title: "Donate Now",
+      html: `
+        <div style="text-align: center;">
+          <h3>Celebrity Food Pantry Home Foundation</h3>
+          <p><strong>Account Number:</strong> <span id="account-number">6540432917</span>
+            <button
+              id="copy-button"
+              style="margin-left: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; padding: 8px 12px; cursor: pointer;"
+            >
+              Copy
+            </button>
+          </p>
+          <p><strong>Bank:</strong> Monipoint</p>
+        </div>
+      `,
+      showCloseButton: true,
+      showCancelButton: false,
+      willOpen: () => {
+        const copyButton = document.getElementById("copy-button");
+        const accountNumber = document.getElementById("account-number");
+
+        if (copyButton) {
+          copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(accountNumber.textContent)
+              .then(() => {
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Copied!',
+                  text: 'Account number copied to clipboard.',
+                  showConfirmButton: false,
+                  timer: 1500,
+                  customClass: {
+                    popup: 'animated-modal'
+                  }
+                });
+              }).catch(() => {
+                Swal.fire('Error', 'Failed to copy!', 'error');
+              });
+          });
+        }
+      },
+      customClass: {
+        popup: 'animated-modal'
+      }
+    });
   };
 
   return (
@@ -67,20 +114,24 @@ const LandingPage = () => {
           </g>
         </svg>
       </div>
-
       <div className="header__content">
         <h1>{heading}</h1>
-
-
-       <div className="container-space">
-          <p>{subText}</p>
-          {AboutUs !== "" ? (
-            <a href="#" className="about-btn" onClick={handleAboutUsClick}>{AboutUs}</a>
-          ) : null} 
-       </div>
-       
+        <p>{subText}</p>
+        <div className="btn-container">
+          {buttonLabel === "Donate Now" ? (
+            <div 
+              className={`about-btn ${isButtonActive ? '' : 'enable'}`} 
+              onClick={handleDonateClick}
+            >
+              {buttonLabel}
+            </div>
+          ) : buttonLabel !== "" ? (
+            <Link to="/about" className="about-btn" onClick={() => console.log("About Us Clicked")}>
+              {buttonLabel}
+            </Link>
+          ) : null}
+        </div>
       </div>
-      
       <div
         className="header__image__container"
         style={{ backgroundImage: `url(${img})` }}

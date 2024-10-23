@@ -15,11 +15,11 @@ const Testimonials = ({ testimonials }) => {
             <div className="caption">
               <h3 className="name">{testimonial.name}</h3>
               <p className="role">{testimonial.role}</p>
-              <div className="social-links">
+              {/* <div className="social-links">
                   <a href="#" className="social-icon"><i class="bi bi-instagram instagram"></i></a>
                   <a href="#" className="social-icon"><i class="bi bi-facebook facebook"></i></a>
                   <a href="#" className="social-icon"><i className="bi bi-youtube youtube" /></a>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}

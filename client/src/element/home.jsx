@@ -27,14 +27,14 @@ const sampleTestimonials = [
     facebook:"",
   },
     {
-      name: 'Omotayo Oduyemi',
+      name: 'Tayo Oduyemi',
       role: 'Chief Executive Officer',
       imageUrl: AuntyTayo,
       instagram:"",
       facebook:"", 
     },
     {
-      name: 'Tayo Adesanya',
+      name: 'Akintayo Adesanya',
       role: 'General Secretary',
       imageUrl: Tayo,
       instagram:"",
@@ -58,7 +58,7 @@ function home (){
         <Sidebar/>
         <LandingPage/>
         <Mission/>
-        <SupportSection/>
+        {/* <SupportSection/> */}
         <About/>
         <CharityCards testimonials={sampleTestimonials}/>
         <Testimonials/>
