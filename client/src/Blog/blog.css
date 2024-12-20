@@ -1,268 +1,366 @@
-/* Container for the entire branding section */
-.branding-section {
-  width: 100%;
-  padding: 20px;
-  background-color: #f8f9fa;
-}
-
-/* Navigation for filters */
-.branding-filters ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.branding-filters li {
-  cursor: pointer;
-  color: #009688;
-  font-weight: 500;
-}
-
-.branding-filters li:hover {
-  color: #00796b;
-}
-
-/* Grid container for branding items */
-.branding-grid {
+.blog-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr; /* Two columns: 1 for side-section, 2 for blog-posts */
   gap: 20px;
-  margin: 20px auto;
+  padding: 20px;
 }
 
-/* Individual branding items (cards) */
-.branding-item {
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+.side-section {
+  display: grid;
+  grid-template-rows: auto auto; /* Stack recent-posts and blog-poster vertically */
+  gap: 20px;
 }
 
-.branding-item img {
-  width: 100%;
-  height: 300px;
+.recent-posts,
+.blog-poster {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.branding-item img:hover{
-  transform: scale(1.05);
-
-}
-.branding-content {
-  padding: 15px;
+.recent-posts {
+  max-height: 600px;
+  overflow-y: auto;
 }
 
-.branding-type {
-  font-size: 12px;
-  color: #888;
-  font-weight: 500;
-  text-transform: uppercase;
+.blog-poster {
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
-
-.branding-item h3 {
+.blog-poster h3{
+  margin-bottom: 15px;
   font-size: 18px;
+  font-weight: bold;
   color: #333;
-  margin: 10px 0;
-  text-align: left;
-  padding: 10px 10px;
 }
 
-.branding-item p {
-  color: #666;
-  font-size: 14px;
-  padding: 0 10px 20px;
-  text-align: left;
+.recent-posts h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
 
-/* .branding-item:hover {
-  transform: scale(1.05);
-} */
-.img-container-author {
-  display: flex;
-  align-items: center;
+.recent-posts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.img-container-author img {
-  border-radius: 50%;
-  margin-right: 10px;
-  max-width: 50px;
-  height: auto;
-}
-
-.author-details {
+.recent-posts li {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
 }
 
-.author-details span {
-  font-size: 12px;
-  color: #333;
-}
-
-.author-details span:first-child {
+.recent-posts .post-title {
   font-weight: bold;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
-.btn-container-{
+
+.recent-posts .post-title:hover {
+  text-decoration: underline;
+}
+
+.recent-posts .post-meta {
   display: flex;
-  justify-content: center;
   align-items: center;
+  font-size: 12px;
+  color: #777;
 }
-.btn-more{
-  /* padding: 5px 10px; */
-  margin-top: 20px;
-  text-transform: uppercase;
-  border: 1px solid black;
-  background: white;
+
+.recent-posts .post-meta .icon {
+  margin-right: 5px;
+}
+
+.recent-posts .post-meta .comments,
+.recent-posts .post-meta .likes {
+  margin-right: 15px;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+}
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 900px;
+  max-width: 100%;
+}
+
+.blog-post h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-post .author {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.blog-post .excerpt {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.blog-post .excerpt a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blog-post .excerpt a:hover {
+  text-decoration: underline;
+}
+
+.blog-post .rate {
+  background-color: #007bff;
+  color: #fff;
   border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
 }
-/* Modal styles */
+
+.blog-post .rate:hover {
+  background-color: #0056b3;
+}
+/*  */
+.blog-poster {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.blog-poster h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-poster .author {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.blog-poster .excerpt {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.blog-poster .excerpt a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blog-poster .excerpt a:hover {
+  text-decoration: underline;
+}
+
+.blog-poster .rate {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.blog-poster .rate:hover {
+  background-color: #0056b3;
+}
+
+
+.banner {
+  max-width: 100%;
+  width: 900px;
+  height: 400px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.banners{
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.icon .bi {
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
+
+.icon .stop {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+
+
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
-  overflow: scroll;
-  
+  align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
-  background: #fff;
+  background: white;
   padding: 20px;
   width: 80%;
-  max-width: 40%;
-  max-height: 90%;
+  max-width: 800px;
   border-radius: 8px;
   position: relative;
-  overflow: scroll;
-}
-.modal-content::-webkit-scrollbar {
-  display: none;
 }
 
-
-.close-modal {
+.modal-content button {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: white;
-  color: red;
+  background: transparent;
   border: none;
-  padding: 5px 10px;
+  color: red;
   cursor: pointer;
-  border-radius: 5px;
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+.modal-content .bi {
+  font-size: 40px;
+
 }
 
-.modal-img {
+.modal-image {
   width: 100%;
-  height: auto;
-  margin-bottom: 15px;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
+  /*  */
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.comment h3{
+  color: black;
+  
+}
+.submit-form input,
+  .submit-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(191, 222, 191);
+    outline: none;
+    resize: none;
+  }
+  .submit-form textarea{
+    max-height: 20%;
+  }
+  
+  .submit-form button {
+    background-color: rgb(2, 74, 2);
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .submit-form button:hover {
+    background-color: darkgreen;
+  }
 
 
-/* For screens with max-width of 1200px */
+/* Media Query for max-width 1200px */
 @media (max-width: 1200px) {
-  .modal-content {
-    width: 90%; /* Adjust width for larger screens */
-    max-width: 500px; /* Restrict the maximum width */
+  .blog-container {
+    grid-template-columns: 1fr 1fr; /* Adjust to one-column layout for side-section and blog-posts */
+  }
+
+  .blog-post {
+    width: 100%; /* Allow blog posts to take up full width */
+  }
+
+  .banner {
+    width: 100%; /* Make banner responsive */
+  }
+
+  .banners {
+    width: 100%; /* Make banners responsive */
   }
 }
 
-/* For screens with max-width of 768px */
+/* Media Query for max-width 768px */
 @media (max-width: 768px) {
-  .modal-content {
-    width: 95%; /* Increase width to take more space on smaller screens */
-    max-width: 400px; /* Further reduce max-width */
+  .blog-container {
+    grid-template-columns: 1fr; /* Stack everything in one column */
   }
 
-  .modal-img {
-    margin-bottom: 10px; /* Reduce spacing below the image */
+  .side-section {
+    grid-template-rows: auto; /* Stack side-section items */
   }
 
-  .close-modal {
-    top: 5px; /* Adjust the position for smaller screens */
-    right: 5px;
-  }
-}
-
-/* For screens with max-width of 600px */
-@media (max-width: 600px) {
-  .modal-content {
-    width: 100%; /* Full width for mobile */
-    max-width: 350px; /* Further reduce the max width */
-  }
-
-  .modal-img {
-    margin-bottom: 8px; /* Further reduce the spacing */
-  }
-
-  .close-modal {
-    padding: 3px 7px; /* Adjust button size */
-  }
-}
-
-/* Media Query for screens with max-width of 1200px */
-@media (max-width: 1200px) {
-  .branding-grid {
-    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
-  }
-  
-  .branding-item h3 {
-    font-size: 16px; /* Slightly smaller heading */
-  }
-  
-  .branding-item p {
-    font-size: 13px; /* Slightly smaller text */
-  }
-}
-
-/* Media Query for screens with max-width of 768px */
-@media (max-width: 768px) {
-  .branding-grid {
-    grid-template-columns: 1fr; /* Adjust to 1 column */
-  }
-  
-  .branding-section {
+  .recent-posts, .blog-poster {
     padding: 15px; /* Reduce padding */
   }
 
-  .branding-item h3 {
-    font-size: 16px; /* Adjust font size */
+  .blog-post {
+    width: 100%; /* Ensure blog posts take up full width */
+    margin-bottom: 15px; /* Reduce margin */
   }
 
-  .branding-item p {
-    font-size: 12px; /* Smaller text size */
-  }
-  
-  .branding-filters ul {
-    flex-direction: column; /* Stack filters vertically */
-    gap: 10px;
+  .banner, .banners {
+    width: 100%; /* Ensure banners are responsive */
+    height: auto; /* Adjust height of banners */
   }
 }
 
-/* Media Query for screens with max-width of 600px */
+/* Media Query for max-width 600px */
 @media (max-width: 600px) {
-  .branding-section {
-    padding: 10px; /* Further reduce padding */
+  .blog-container {
+    padding: 10px; /* Reduce padding */
   }
 
-  .branding-item h3 {
-    font-size: 14px; /* Smaller heading */
+  .recent-posts, .blog-poster {
+    padding: 10px; /* Reduce padding */
   }
 
-  .branding-item p {
-    font-size: 12px; /* Smaller text */
+  .blog-post {
+    padding: 10px; /* Reduce padding */
+    margin-bottom: 10px; /* Reduce margin */
   }
 
-  .img-container-author img {
-    max-width: 40px; /* Smaller author image */
+  .banner, .banners {
+    width: 100%; /* Ensure banners fit smaller screens */
+    height: 200px; /* Reduce banner height */
   }
 }

@@ -1,0 +1,33 @@
+.add-post-list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-post-list-searchbar {
+    flex: 1;
+}
+
+.add-post-list-searchbar input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.add-post-list-addpost {
+    margin-left: 20px;
+}
+
+.add-post-list-addpost button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.add-post-list-addpost button:hover {
+    background-color: #45a049;
+}

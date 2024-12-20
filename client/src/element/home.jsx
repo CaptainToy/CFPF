@@ -2,6 +2,7 @@ import UpperNav from "../component/upperNav"
 import Sidebar from "../component/navbar"
 import LandingPage from "../component/landingPage"
 import SupportSection from "../component/support"
+import Blog from '../Blog/blog'
 import About from "../component/about"
 import CharityCards from '../component/CharityCards'
 import Footer from "../component/footer"
@@ -58,7 +59,6 @@ function home (){
         <Sidebar/>
         <LandingPage/>
         <Mission/>
-        {/* <SupportSection/> */}
         <About/>
         <CharityCards testimonials={sampleTestimonials}/>
         <Testimonials/>

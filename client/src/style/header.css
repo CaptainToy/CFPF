@@ -5,13 +5,13 @@
   box-sizing: border-box;
 }
 
- ul {
+ul {
   list-style: none;
   text-decoration: none;
 }
 
 .navbar-container-content {
-  padding: 10px 20px;
+  padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,41 +22,39 @@
   max-width: 100%;
 }
 
-.navbar-container-content ul li a{
+.navbar-container-content ul li a {
   color: green; 
   gap: 20px;
   font-weight: 600;
   text-decoration: none;
   font-size: 18px;
   list-style: none;
-  text-decoration: none;
 }
 
 /* logo  */
 .logo {
-  font-size: 30px;
+  font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
-  /* margin-lef; */
 }
 
 .logo img {
-  width: 70px;         
-  height: 70px;        
+  width: 90px;         
+  height: 90px;        
   object-fit: cover;   
 }
-.navLink a{
+
+.navLink a {
   color: green;
   position: relative;
   text-decoration: none;
-  
 }
 
 .navLink::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 1px;
-  bottom: -3px;
+  height: 2px;
+  bottom: -10px;
   left: 0;
   background-color: green;
   transition: width 0.4s ease-in-out;
@@ -73,17 +71,48 @@
   align-items: center;
   gap: 60px;
 }
-.hamburger101{
+
+.hamburger101 {
   display: none;
 }
-.display-non{
+
+.display-non {
   display: none;
 }
+
+.navlink {
+  position: relative;
+  text-decoration: none;
+  color: #333; /* Change to your desired text color */
+  padding: 10px 0;
+}
+
+.navlink.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 7px; 
+  width: 100%;
+  height: 2px; 
+  background: green; 
+  transform: scaleX(1.1);
+  transition: transform 0.5s ease;
+}
+
+.navlink:not(.active)::after {
+  transform: scaleX(10);
+}
+
 /* media queries */
-@media screen and (max-width: 1200px), 
-       screen and (max-width: 768px), 
-       screen and (max-width: 600px), 
-       screen and (max-width: 780px) {
+@media screen and (max-width: 1400px),
+       screen and (max-width: 1200px),
+       screen and (max-width: 1024px),
+       screen and (max-width: 992px),
+       screen and (max-width: 780px),
+       screen and (max-width: 768px),
+       screen and (max-width: 600px),
+       screen and (max-width: 480px),
+       screen and (max-width: 360px) {
 
   /* hamburger */
   .hamburger {
@@ -95,10 +124,12 @@
     color: black;
     font-size: 30px;
   }
-  .display-non{
+
+  .display-non {
     display: block;
   }
-  .hamburger101{
+
+  .hamburger101 {
     display: block;
     color: black;
     font-size: 40px;
@@ -163,8 +194,6 @@
     margin: 16px 0;
     color: green; 
   }
-  .logo{
-    margin-left: -5%;
-  }
-}
 
+ 
+}

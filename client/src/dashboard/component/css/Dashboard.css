@@ -1,0 +1,198 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+
+
+.Dashboard-last-container {
+  display: flex;
+  flex-direction: row; /* Ensures the main layout stays in a row */
+  width: 100%;
+  height: 100%;
+}
+
+.main-container-content {
+  display: flex;
+  flex-direction: column; /* Apply column layout specifically here */
+  flex-grow: 1; /* Adjust to fill the available space if necessary */
+  padding: 20px; /* Optional: Add spacing inside the container */
+  gap: 20px; /* Optional: Add spacing between children */
+}
+
+/* Additional scoped styles for other components if necessary */
+.Sider {
+  width: 250px; /* Example width for the sidebar */
+  background-color: #f4f4f4;
+}
+/* Navbar */
+.Dashboard-last-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 350px;
+  height: 100vh;
+  background: #062e06;
+}
+
+.Dashboard-last-logo {
+  margin: 3rem 0 1rem 0;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Dashboard-last-logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.Dashboard-last-navbar ul {
+    gap: 10px;
+  margin: 0 auto;
+}
+
+.Dashboard-last-navbar li {
+  padding-bottom: 30px;
+}
+
+.Dashboard-last-navbar li a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.Dashboard-last-navbar i {
+  width: 70px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Dashboard-last-logout {
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+}
+
+/* Main Section */
+.Dashboard-last-main {
+    display: flex;
+    flex-direction: column;
+  width: 100%;
+}
+
+.Dashboard-last-main-top {
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.Dashboard-last-main-body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 20px;
+    width: 100%;
+}
+
+.Dashboard-last-main-body h1 {
+  margin: 20px 10px;
+}
+
+.Dashboard-last-search-bar {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.Dashboard-last-search-bar input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #062e06;
+  outline: none;
+}
+
+.Dashboard-last-search-bar input:focus {
+  border: 1px solid blueviolet;
+}
+
+.Dashboard-last-search-bar select {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px;
+  margin-left: 2rem;
+}
+
+.Dashboard-last-row {
+  display: flex;
+  padding: 10px;
+  margin-top: 1.3rem;
+  justify-content: space-between;
+}
+
+.Dashboard-last-row p {
+  color: rgb(54, 54, 54);
+  font-size: 15px;
+}
+
+.Dashboard-last-row p span {
+  color: blueviolet;
+}
+
+.Dashboard-last-job-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.Dashboard-last-job-card {
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  border: 2px solid rgb(190, 190, 190);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.Dashboard-last-job-details {
+  display: flex;
+}
+
+.Dashboard-last-job-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Dashboard-last-job-img i {
+  width: 70px;
+  font-size: 3rem;
+  margin-left: 1rem;
+  padding: 10px;
+  color: rgb(82, 22, 138);
+  background: rgb(216, 205, 226);
+}
+
+.Dashboard-last-job-text {
+  margin-left: 2.3rem;
+}
+
+.Dashboard-last-job-text span {
+  color: rgb(116, 112, 112);
+}
+
+.Dashboard-last-job-salary {
+  text-align: right;
+  color: rgb(54, 54, 54);
+}
+
+.Dashboard-last-job-card:active {
+  border: 2px solid blueviolet;
+  transition: 0.4s;
+}

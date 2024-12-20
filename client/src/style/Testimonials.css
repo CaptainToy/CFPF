@@ -4,9 +4,6 @@
     font-family: Arial, sans-serif;
     margin-bottom: 15px;
   }
-  
- 
-  
   .testimonialsHeading {
     font-size: 36px;
     margin-bottom: 15px;
@@ -61,6 +58,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0 20px;
     color: #333;
   }
   

@@ -98,87 +98,61 @@
   font-size: 40px;
 }
   .container-text{
-    margin-top: -20px;
     max-width: 100%;
+    margin-top: 40px;
   }
-/* Media query for screens with a max width of 1200px */
-@media screen and (max-width: 1200px) {
+
+/* Media Queries */
+@media (max-width: 1200px) {
+ 
+
   .school-container {
     padding: 40px;
-    flex-direction: column;
   }
 
   .content-section {
-    width: 550px;
+    width: 100%;
   }
 
   .welcome-section {
-    width: 750px;
-  }
-
-  .container-text .title {
-    font-size: 35px;
-  }
-  .title-mission{
-    margin-top: -110px;
+    padding: 50px;
+    width: 100%;
   }
 }
 
-/* Media query for screens with a max width of 768px */
-@media screen and (max-width: 768px) {
-  .school-container {
-    padding: 30px;
-  }
+@media (max-width: 1020px) {
+ 
 
-  .content-section {
-    width: 100%;
-  }
-
-  .welcome-section {
-    width: 100%;
-    padding: 40px;
+  .info-card {
+    display: flex;
+    padding: 5px;
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 10px;
   }
 
   .iconpi {
-    font-size: 45px;
-    padding: 30px;
-  }
-  
-
-  .info-text h3 {
-    font-size: 22px;
-  }
-
-  .info-text p {
-    font-size: 18px;
-  }
-
-  .welcome-section h3 {
-    font-size: 25px;
-  }
-
-  .container-text .title {
     font-size: 30px;
+    padding: 20px;
+  }
+
+  .content-section {
+    width: 100%;
+  }
+  .container-text{
+    margin-top: -100px;
   }
 }
 
-/* Media query for screens with a max width of 600px */
-@media screen and (max-width: 600px) {
-  .school-container {
-    padding: 20px;
-  }
-  .svg-container-content{
-    max-width: 100%;
-    overflow: hidden;
+@media (max-width: 768px) {
+  .svg-container-content {
+    top: 5;
+    left: 5;
   }
 
   .welcome-section {
-    padding: 30px;
-  }
-
-  .iconpi {
-    font-size: 35px;
-    padding: 20px;
+    padding: 40px;
+    height: auto;
   }
 
   .info-text h3 {
@@ -188,12 +162,31 @@
   .info-text p {
     font-size: 16px;
   }
+  .container-text{
+    margin-top: -40px;
+  }
+}
 
-  .welcome-section h3 {
-    font-size: 20px;
+@media (max-width: 600px) {
+  .svg-container-content {
+    opacity: 0.7;
+  }
+
+  .title-mission {
+    padding: 15px 5px;
+    margin-bottom: 0;
+  }
+
+  .welcome-section {
+    padding: 20px;
   }
 
   .container-text .title {
-    font-size: 25px;
+    font-size: 30px;
+  }
+
+  .iconpi {
+    font-size: 40px;
+    padding: 20px;
   }
 }

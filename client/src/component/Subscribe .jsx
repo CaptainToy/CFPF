@@ -36,6 +36,7 @@ const Subscribe = () => {
                     <button type="submit" className="subscribe-button">SUBSCRIBE NOW</button>
                 </form>
                 {message && <p className="subscribe-message">{message}</p>}
+                
             </div>
         </div>
     );

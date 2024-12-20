@@ -1,0 +1,55 @@
+.post-form-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  
+  .post-form input[type="text"],
+  .post-form textarea,
+  .post-form input[type="file"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .post-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .post-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .posts-list {
+    margin-top: 20px;
+  }
+  
+  .post-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  

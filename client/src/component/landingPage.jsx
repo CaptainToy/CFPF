@@ -34,14 +34,12 @@ const data = [
 
 const LandingPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isButtonActive, setIsButtonActive] = useState(true);
   const { img, heading, subText, buttonLabel } = data[currentIndex];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
     }, 5000);
-
     return () => clearInterval(intervalId);
   }, []);
 
@@ -49,62 +47,118 @@ const LandingPage = () => {
     MySwal.fire({
       title: "Donate Now",
       html: `
-        <div style="text-align: center;">
+        <div style="text-align: center; max-width: 100%; overflow: auto;">
           <h3>Celebrity Food Pantry Home Foundation</h3>
-          <p><strong>Account Number:</strong> <span id="account-number">6540432917</span>
-            <button
-              id="copy-button"
-              style="margin-left: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; padding: 8px 12px; cursor: pointer;"
-            >
-              Copy
-            </button>
+          <p>
+            <strong>Select a Donation Method:</strong>
+            <div>
+              <button
+                id="bank-transfer-button"
+                style="margin: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; padding: 8px 12px; cursor: pointer;"
+              >
+                Bank Transfer
+              </button>
+              
+            </div>
           </p>
-          <p><strong>Bank:</strong> Monipoint</p>
+          <div id="bank-transfer-info" style="display: none; text-align: left;">
+            <p><strong>Bank:</strong> Moniepoint</p>
+          </div>
+          <a
+            id="gofundme-link"
+            href="https://gofund.me/373bf726"
+            target="_blank"
+            style="display: none; padding: 10px 20px; background-color: #00aaff; color: white; border-radius: 5px; text-decoration: none; height: 40px; line-height: 40px; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap;"
+          >
+            GoFundMe Donation Page
+          </a>
         </div>
       `,
       showCloseButton: true,
-      showCancelButton: false,
       willOpen: () => {
-        const copyButton = document.getElementById("copy-button");
-        const accountNumber = document.getElementById("account-number");
+        const bankTransferButton = document.getElementById("bank-transfer-button");
+        const gofundmeButton = document.getElementById("gofundme-button");
+        const bankTransferInfo = document.getElementById("bank-transfer-info");
+        const gofundmeLink = document.getElementById("gofundme-link");
 
-        if (copyButton) {
-          copyButton.addEventListener('click', () => {
-            navigator.clipboard.writeText(accountNumber.textContent)
-              .then(() => {
-                Swal.fire({
-                  icon: 'success',
-                  title: 'Copied!',
-                  text: 'Account number copied to clipboard.',
-                  showConfirmButton: false,
-                  timer: 1500,
-                  customClass: {
-                    popup: 'animated-modal'
-                  }
-                });
-              }).catch(() => {
-                Swal.fire('Error', 'Failed to copy!', 'error');
+        // Handle Bank Transfer Button Click
+        bankTransferButton?.addEventListener('click', () => {
+          bankTransferInfo.style.display = 'block';
+          gofundmeLink.style.display = 'none';
+          // Open new modal to show account number
+          MySwal.fire({
+            title: "Bank Transfer Account Number",
+            html: `
+              <div style="text-align: center;">
+                <p><strong>Account Number:</strong> 6540432917</p>
+                <button
+                  id="copy-button"
+                  style="background-color: #007bff; color: white; border: none; border-radius: 5px; padding: 8px 12px; cursor: pointer;"
+                >
+                  Copy
+                </button>
+              </div>
+            `,
+            showCloseButton: true,
+            didOpen: () => {
+              const copyButton = document.getElementById("copy-button");
+              const accountNumber = "6540432917";
+
+              // Handle Copy Button Click (for Bank Transfer)
+              copyButton?.addEventListener('click', () => {
+                navigator.clipboard.writeText(accountNumber).then(() => {
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Copied!',
+                    text: 'Account number copied to clipboard.',
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                }).catch(() => Swal.fire('Error', 'Failed to copy!', 'error'));
               });
+            }
           });
-        }
+        });
+
+        // Handle GoFundMe Button Click
+        gofundmeButton?.addEventListener('click', () => {
+          // Display the GoFundMe link modal
+          MySwal.fire({
+            title: "Donate via GoFundMe",
+            html: `
+              <div style="text-align: center; max-width: 100%; overflow: auto;">
+                <p>Click the link below to donate via GoFundMe:</p>
+                <a
+                  href="https://gofund.me/373bf726"
+                  target="_blank"
+                  style="padding: 10px 20px; background-color: #00aaff; color: white; border-radius: 5px; text-decoration: none; height: 40px; line-height: 40px; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap;"
+                >
+                  GoFundMe Donation Page
+                </a>
+              </div>
+            `,
+            showCloseButton: true
+          });
+        });
       },
-      customClass: {
-        popup: 'animated-modal'
+      didClose: () => {
+        // Show error if neither option is selected
+        if (!document.getElementById("bank-transfer-info").style.display && !document.getElementById("gofundme-link").style.display) {
+          Swal.fire('Error', 'Please select a donation method!', 'error');
+        }
       }
     });
   };
+
 
   return (
     <header className="section__container header__container">
       <div className="svg-container">
         <svg
-          id="visual"
           viewBox="0 0 900 600"
           width="900"
           height="600"
           xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          version="1.1"
           preserveAspectRatio="xMidYMid meet"
           className="svg-content-container"
         >
@@ -114,30 +168,30 @@ const LandingPage = () => {
           </g>
         </svg>
       </div>
+
       <div className="header__content">
         <h1>{heading}</h1>
-        <p>{subText}</p>
+        <p className="centered-text">{subText}</p>
         <div className="btn-container">
           {buttonLabel === "Donate Now" ? (
-            <div 
-              className={`about-btn ${isButtonActive ? '' : 'enable'}`} 
-              onClick={handleDonateClick}
-            >
+            <button className="about-btn" onClick={handleDonateClick}>
               {buttonLabel}
-            </div>
-          ) : buttonLabel !== "" ? (
-            <Link to="/about" className="about-btn" onClick={() => console.log("About Us Clicked")}>
+            </button>
+          ) : buttonLabel && (
+            <Link to="/about" className="about-btn">
               {buttonLabel}
             </Link>
-          ) : null}
+          )}
         </div>
       </div>
-      <div
-        className="header__image__container"
-        style={{ backgroundImage: `url(${img})` }}
-        role="img"
-        aria-label={heading}
-      ></div>
+
+      <div className="header__image__container" aria-label={heading}>
+        <div id="frame">
+          <div id="border">
+            <img src={img} alt={heading} className="container-img-content" />
+          </div>
+        </div>
+      </div>
     </header>
   );
 };
